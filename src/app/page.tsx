@@ -148,7 +148,7 @@ const BlinkyWebsite = () => {
               href="https://dexscreener.com/solana/hyvgxxle1ykbtyyktpbkxsdek15pxlsbfo8adu3gue5z"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#e55c9c] transition-colors"
+              className="flex items-center hover:text-[#e55c9c] transition-colors"
             >
              <ChartArea className="mr-2" /> Dexscreener
             </a>

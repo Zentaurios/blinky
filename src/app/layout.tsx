@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     title: 'Meet Blinky',
     description: 'Blink and You\'re Rich',
     images: ['/blinky.jpg'],
-    creator: '@blinky',
-    site: '@blinky',
+    creator: '@Blinky990862',
+    site: '@Blinky990862',
   },
   robots: {
     index: true,
@@ -53,7 +53,6 @@ export const metadata: Metadata = {
       url: '/apple-touch-icon-precomposed.png',
     },
   },
-  manifest: '/site.webmanifest',
   themeColor: '#768f29',
 };
 

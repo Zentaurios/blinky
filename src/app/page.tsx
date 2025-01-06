@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Send } from 'lucide-react';
+import { Menu, X, Send, Video } from 'lucide-react';
 import Image from 'next/image';
 import blinky from '../../public/blinky.jpg';
 
@@ -63,8 +63,14 @@ const BlinkyWebsite = () => {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center pt-20">
         <div className="container mx-auto px-4 text-center">
-          <div className="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-6">
-            <Image src={blinky} alt="Blinky" />
+          <div className="w-72 h-48 rounded-md mx-auto mb-6">
+            <video
+              src="/blinky.MP4"
+              autoPlay
+              loop
+              muted
+              className="w-full h-full rounded-md object-cover"
+            />
           </div>
           <h1 className="text-[#e55c9c] text-6xl md:text-8xl font-bold mb-6">Meet Blinky</h1>
           <p className="text-2xl md:text-4xl mb-8">Blink and You're Rich</p>
@@ -104,7 +110,7 @@ const BlinkyWebsite = () => {
       {/* Footer */}
       <footer id="socials" className="bg-[#768f29]/50 py-12">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8 text-lg">
             <a
               href="https://x.com/Blinky990862"
               target="_blank"
@@ -120,6 +126,14 @@ const BlinkyWebsite = () => {
               className="flex items-center hover:text-[#e55c9c] transition-colors"
             >
               <Send className="mr-2" /> Telegram
+            </a>
+            <a
+              href="https://www.tiktok.com/@solanas_blinky"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center hover:text-[#e55c9c] transition-colors"
+            >
+              <Video className="mr-2" /> Tiktok
             </a>
             <a
               href="https://dexscreener.com/solana/hyvgxxle1ykbtyyktpbkxsdek15pxlsbfo8adu3gue5z"

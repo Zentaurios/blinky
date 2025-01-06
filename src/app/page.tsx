@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Send, Video, Copy } from 'lucide-react';
+import { Menu, X, Send, Video, Copy, ChartArea } from 'lucide-react';
 import Image from 'next/image';
 import blinky from '../../public/blinky.jpg';
 import toast from 'react-hot-toast';
@@ -150,7 +150,7 @@ const BlinkyWebsite = () => {
               rel="noopener noreferrer"
               className="hover:text-[#e55c9c] transition-colors"
             >
-              Dexscreener
+             <ChartArea className="mr-2" /> Dexscreener
             </a>
           </div>
           <div className="text-center mt-6">

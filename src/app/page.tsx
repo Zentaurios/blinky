@@ -1,8 +1,9 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Send, Video } from 'lucide-react';
+import { Menu, X, Send, Video, Copy } from 'lucide-react';
 import Image from 'next/image';
 import blinky from '../../public/blinky.jpg';
+import toast from 'react-hot-toast';
 
 const BlinkyWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +16,11 @@ const BlinkyWebsite = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("B4fuA7wKBagyR1V5BBAhGJu7z2cD16rubZ5HPUNcpump");
+    toast("Copied to clipboard!");
+  };
 
   const storyParagraphs = [
     "In the fast-paced world of crypto, fortunes are made in the blink of an eye.",
@@ -72,10 +78,13 @@ const BlinkyWebsite = () => {
               className="w-full h-full rounded-md object-cover"
             />
           </div>
-          <h1 className="text-[#e55c9c] text-6xl md:text-8xl font-bold mb-6">Meet Blinky</h1>
-          <p className="text-2xl md:text-4xl mb-8">Blink and You're Rich</p>
-          <div className="break-all text-sm opacity-70">
-            ca: B4fuA7wKBagyR1V5BBAhGJu7z2cD16rubZ5HPUNcpump
+          <h1 className="text-[#e55c9c] text-6xl md:text-8xl font-bold mb-6" style={{ textShadow: '2px 2px 4px #404c28' }}>Meet Blinky</h1>
+          <p className="text-2xl md:text-4xl mb-8" style={{ textShadow: '2px 2px 4px #404c28' }}>Blink and You're Rich</p>
+          <div className="break-all text-sm opacity-70 flex items-center justify-center space-x-2">
+            <span>ca: B4fuA7wKBagyR1V5BBAhGJu7z2cD16rubZ5HPUNcpump</span>
+            <button onClick={copyToClipboard} className="p-1 bg-[#e55c9c] rounded-full hover:bg-[#d14b8a] transition-colors">
+              <Copy size={16} />
+            </button>
           </div>
         </div>
       </section>
